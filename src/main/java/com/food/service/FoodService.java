@@ -93,4 +93,7 @@ public class FoodService {
 		return ResponseEntity.ok(carts);
 	}
 
+	public FoodRepository getFoodRepository() {
+		return foodRepository;
+	}
 }
