@@ -92,8 +92,4 @@ public class FoodService {
 		List<Cart> carts = foodRepository.SearchCarts(name, status,type);
 		return ResponseEntity.ok(carts);
 	}
-
-	public FoodRepository getFoodRepository() {
-		return foodRepository;
-	}
 }
