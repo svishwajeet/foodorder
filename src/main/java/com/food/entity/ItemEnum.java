@@ -8,5 +8,4 @@ public enum ItemEnum {
 	ITALIAN,
 	CHINESE;
 	
-	
 }

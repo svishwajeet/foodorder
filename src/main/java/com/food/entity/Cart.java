@@ -2,13 +2,10 @@ package com.food.entity;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,7 +18,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Customer {
+public class Cart {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,15 +27,17 @@ public class Customer {
 	private double price;
 	private String type;
 	private int quantity;
+
 	@CreationTimestamp
-	private LocalDateTime createdTime;
+	private LocalDateTime createdTime ;
+
+//	private long createdTime =new Date().getTime();
+
 	@UpdateTimestamp
 	private LocalDateTime modifiedTime;
 	
 //	@Enumerated(EnumType.STRING)
 	private StatusEnum status;
 	private ItemEnum item;
-	
-	
 
 }
